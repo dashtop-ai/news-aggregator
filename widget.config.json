@@ -1,0 +1,35 @@
+{
+  "name": "News Aggregator",
+  "widgetType": "news-aggregator",
+  "version": "1.0.0",
+  "description": "AI-powered news aggregator — curated feed, smart summaries, topic search",
+  "category": "ai",
+  "tags": ["news", "ai", "summary", "daily", "rss", "feed"],
+  "author": {
+    "name": "Dashtop Community",
+    "username": "dashtop-ai"
+  },
+  "permissions": ["network:fetch"],
+  "defaultConfig": {
+    "sources": ["TechCrunch", "Hacker News", "The Verge"],
+    "refreshTime": "07:00"
+  },
+  "defaultSize": { "w": 5, "h": 5 },
+  "minSize": { "w": 4, "h": 4 },
+  "settingsSchema": {
+    "type": "object",
+    "properties": {
+      "sources": {
+        "type": "array",
+        "title": "News Sources",
+        "items": { "type": "string" },
+        "default": ["TechCrunch", "Hacker News", "The Verge"]
+      },
+      "refreshTime": {
+        "type": "string",
+        "title": "Daily Refresh Time",
+        "default": "07:00"
+      }
+    }
+  }
+}
